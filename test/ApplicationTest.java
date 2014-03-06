@@ -41,6 +41,14 @@ public class ApplicationTest {
         
     }
 
+       @Test
+    public void simpleCheck3() {
+        int a = 1 + 1;
+        assertThat(a).isEqualTo(2);
+
+        
+    }
+
     @Test
     public void renderTemplate() {
         Content html = views.html.index.render("Your new application is ready.");
