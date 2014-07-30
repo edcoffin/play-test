@@ -15,6 +15,8 @@ import play.i18n.Lang;
 import play.libs.F;
 import play.libs.F.*;
 
+import controllers.Application;
+
 import static play.test.Helpers.*;
 import static org.fest.assertions.Assertions.*;
 
@@ -56,5 +58,9 @@ public class ApplicationTest {
         assertThat(contentAsString(html)).contains("Your new application is ready.");
     }
 
+    @Test
+    public void testProduct() {
+        assertThat(Application.product(5,5)).isEqualTo(25);
+    }
 
 }
